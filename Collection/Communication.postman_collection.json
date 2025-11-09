@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "475f76d6-b630-4552-bc25-c93056011091",
+		"name": "Communication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43804602"
+	},
+	"item": [
+		{
+			"name": "Store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ0MDQyLCJleHAiOjE3NjI2NDc2NDIsIm5iZiI6MTc2MjY0NDA0MiwianRpIjoicmdDYjZaVDRGYng3WXRsNyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yo4eUkm_G1Y0kuSh9_Gc_Lhthm0w1EO9NS3IH_m2tr0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6ImtKcHNpUlNDUVlDWTlXSFgrUmM5Nnc9PSIsInZhbHVlIjoiZWNaeFI5amNiWklLYURRY3Q4bVZET3BubWpCa1RuZ0ovNmY2Z0JOUS9tMHBaRnAzZ0Z3U3FuQkE5RlZkVmpGbExWNks1a3ZrMHMyNVI4cHhMSVBvcWhzVWFJZTZyQUNCTStrYnhqZUJtdDFaODlZd2FtWmpyUFFhSE56b1ErUlQ0U0RTcmE1bzVzdXpNbVJ2Q2Y0dkcwZHdYeVVoUzE5ZkJlMFZNZ1BLcENnZXcwRkF0RTFLVFBVL3NyQmo4WUlhcy8rVFhFV0ZiNFMrZ1VrUUhXby9LUGF3MWwwaXYrNVlia1Q5ckZUbHdwbDJadStZbjg4ZE9BaG9sZTNLSm92TEw0ajZWWVpTQXVBRzk2LzdKTnQzN2tBS0xPV0xNWDZXSitDOTlWNGVCS2FBaWg2L3VLYkh2OGlSc2ZYNWd5ZzZJWEg2M3VqNTZNMjZObU9KYUp6Z2tEbGJCeVJWTjBFYTJxZC9NbkZCS3JiQWF0QWQ3SlBKMk4vcU5nNmlPb2VCbDdVNmllOWtWZGVLaG5iTlpDWXBGTytNd0E3MnZBOWhyRXh6U3hXY3p0V0NXYXJzVUQ3cTdXT2hnZ0JKekNpTyIsIm1hYyI6IjRhOTE3ZGYzNjRlMDVlMjIzYjZiNzFhMGVmNTNmODRmMjc2ZGQ1ODVlYTExZGViOTY5M2E5YzVhYzRhMGVjMDYiLCJ0YWciOiIifQ%3D%3D",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "call",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2025-02-01 15:20:00",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "Called client about new offer",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clients/1/communications",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clients",
+						"1",
+						"communications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ0MDQyLCJleHAiOjE3NjI2NDc2NDIsIm5iZiI6MTc2MjY0NDA0MiwianRpIjoicmdDYjZaVDRGYng3WXRsNyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yo4eUkm_G1Y0kuSh9_Gc_Lhthm0w1EO9NS3IH_m2tr0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clients/1/communications",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clients",
+						"1",
+						"communications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ1ODM5LCJleHAiOjE3NjI2NDk0MzksIm5iZiI6MTc2MjY0NTgzOSwianRpIjoiNXBwc2NSRUZUYU51eTJZRiIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.R7C6sgKXBm9FAsVXb0TGZP3cbdXraIvwJBG8ziYDW4g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clients/1/communications/1?type=email",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clients",
+						"1",
+						"communications",
+						"1"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "email"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ0MDQyLCJleHAiOjE3NjI2NDc2NDIsIm5iZiI6MTc2MjY0NDA0MiwianRpIjoicmdDYjZaVDRGYng3WXRsNyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yo4eUkm_G1Y0kuSh9_Gc_Lhthm0w1EO9NS3IH_m2tr0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clients/1/communications",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clients",
+						"1",
+						"communications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restore",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ0MDQyLCJleHAiOjE3NjI2NDc2NDIsIm5iZiI6MTc2MjY0NDA0MiwianRpIjoicmdDYjZaVDRGYng3WXRsNyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yo4eUkm_G1Y0kuSh9_Gc_Lhthm0w1EO9NS3IH_m2tr0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clients/1/communications/1/restore",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clients",
+						"1",
+						"communications",
+						"1",
+						"restore"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,344 @@
+{
+	"info": {
+		"_postman_id": "c03337b3-857a-47a1-8a81-31761217c8ba",
+		"name": "Follow-up",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43804602"
+	},
+	"item": [
+		{
+			"name": "Add Follow-up (Reminder)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQwNjkyLCJleHAiOjE3NjI2NDQyOTIsIm5iZiI6MTc2MjY0MDY5MiwianRpIjoibXN0R2YzTXlvRHpUWmF3bSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.KYKEJ9C7xhW_tJY-UzbSUOMY-V-_bCrTgZd2aPC1UsI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6ImtKcHNpUlNDUVlDWTlXSFgrUmM5Nnc9PSIsInZhbHVlIjoiZWNaeFI5amNiWklLYURRY3Q4bVZET3BubWpCa1RuZ0ovNmY2Z0JOUS9tMHBaRnAzZ0Z3U3FuQkE5RlZkVmpGbExWNks1a3ZrMHMyNVI4cHhMSVBvcWhzVWFJZTZyQUNCTStrYnhqZUJtdDFaODlZd2FtWmpyUFFhSE56b1ErUlQ0U0RTcmE1bzVzdXpNbVJ2Q2Y0dkcwZHdYeVVoUzE5ZkJlMFZNZ1BLcENnZXcwRkF0RTFLVFBVL3NyQmo4WUlhcy8rVFhFV0ZiNFMrZ1VrUUhXby9LUGF3MWwwaXYrNVlia1Q5ckZUbHdwbDJadStZbjg4ZE9BaG9sZTNLSm92TEw0ajZWWVpTQXVBRzk2LzdKTnQzN2tBS0xPV0xNWDZXSitDOTlWNGVCS2FBaWg2L3VLYkh2OGlSc2ZYNWd5ZzZJWEg2M3VqNTZNMjZObU9KYUp6Z2tEbGJCeVJWTjBFYTJxZC9NbkZCS3JiQWF0QWQ3SlBKMk4vcU5nNmlPb2VCbDdVNmllOWtWZGVLaG5iTlpDWXBGTytNd0E3MnZBOWhyRXh6U3hXY3p0V0NXYXJzVUQ3cTdXT2hnZ0JKekNpTyIsIm1hYyI6IjRhOTE3ZGYzNjRlMDVlMjIzYjZiNzFhMGVmNTNmODRmMjc2ZGQ1ODVlYTExZGViOTY5M2E5YzVhYzRhMGVjMDYiLCJ0YWciOiIifQ%3D%3D",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "due_date",
+							"value": "2025-02-03 10:00:00",
+							"type": "text"
+						},
+						{
+							"key": "note",
+							"value": "Follow up after meeting",
+							"type": "text"
+						},
+						{
+							"key": "assigned_to",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "priority",
+							"value": "high",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/follow-ups",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"follow-ups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View all Follow-ups",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjk0MDkyLCJleHAiOjE3NjI2OTc2OTIsIm5iZiI6MTc2MjY5NDA5MiwianRpIjoiN1hzaDlsSng4bzd4dWliOSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.nmGgc-WIZKFvVT4o2TJ7CfEUd1l0Aj9brdjpQJYcvZQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/follow-ups?status=pending&due_date=2025-11-10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"follow-ups"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "due_date",
+							"value": "2025-11-10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View a specific Follow-up",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQwMzY1LCJleHAiOjE3NjI2NDM5NjUsIm5iZiI6MTc2MjY0MDM2NSwianRpIjoicGlSaE1IYWtNakNoSm1UciIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.yVO_WXHaV111lYFROgMrNPPKSQ-5hsy9ehGUtpP9lYA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/follow-ups/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"follow-ups",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follow-up modification",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQwNjkyLCJleHAiOjE3NjI2NDQyOTIsIm5iZiI6MTc2MjY0MDY5MiwianRpIjoibXN0R2YzTXlvRHpUWmF3bSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.KYKEJ9C7xhW_tJY-UzbSUOMY-V-_bCrTgZd2aPC1UsI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/follow-ups/10?status=pending&due_date=2025-11-18",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"follow-ups",
+						"10"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "pending"
+						},
+						{
+							"key": "due_date",
+							"value": "2025-11-18"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Follow-up (Soft Delete)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQwNjkyLCJleHAiOjE3NjI2NDQyOTIsIm5iZiI6MTc2MjY0MDY5MiwianRpIjoibXN0R2YzTXlvRHpUWmF3bSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.KYKEJ9C7xhW_tJY-UzbSUOMY-V-_bCrTgZd2aPC1UsI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/follow-ups/11",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"follow-ups",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recover deleted follow-up",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQwNjkyLCJleHAiOjE3NjI2NDQyOTIsIm5iZiI6MTc2MjY0MDY5MiwianRpIjoibXN0R2YzTXlvRHpUWmF3bSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.KYKEJ9C7xhW_tJY-UzbSUOMY-V-_bCrTgZd2aPC1UsI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/follow-ups/10/restore",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"follow-ups",
+						"10",
+						"restore"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark the task as completed",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQwNjkyLCJleHAiOjE3NjI2NDQyOTIsIm5iZiI6MTc2MjY0MDY5MiwianRpIjoibXN0R2YzTXlvRHpUWmF3bSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.KYKEJ9C7xhW_tJY-UzbSUOMY-V-_bCrTgZd2aPC1UsI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/follow-ups/10/complete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"follow-ups",
+						"10",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel task",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQwNjkyLCJleHAiOjE3NjI2NDQyOTIsIm5iZiI6MTc2MjY0MDY5MiwianRpIjoibXN0R2YzTXlvRHpUWmF3bSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.KYKEJ9C7xhW_tJY-UzbSUOMY-V-_bCrTgZd2aPC1UsI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/follow-ups/10/cancel",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"follow-ups",
+						"10",
+						"cancel"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

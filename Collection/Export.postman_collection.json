@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "194782ea-3a4d-4a6f-b8a0-d654c12b247c",
+		"name": "Export",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43804602"
+	},
+	"item": [
+		{
+			"name": "Export clients",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ3MDYzLCJleHAiOjE3NjI2NTA2NjMsIm5iZiI6MTc2MjY0NzA2MywianRpIjoiSzMwaEZ4bFZNbTIwNkVEZyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.h8_lsmvaXVqSQL-v1A8d2ZhtT0QJu-vx40SmSD6YqNI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "filters[status]",
+							"value": "active",
+							"type": "text"
+						},
+						{
+							"key": "filters[assigned_to]",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "format",
+							"value": "xlsx",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/export/clients",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"export",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ3MDYzLCJleHAiOjE3NjI2NTA2NjMsIm5iZiI6MTc2MjY0NzA2MywianRpIjoiSzMwaEZ4bFZNbTIwNkVEZyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.h8_lsmvaXVqSQL-v1A8d2ZhtT0QJu-vx40SmSD6YqNI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/export/149b3859-f9ed-4f73-8673-1a60c94cbd8e/status",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"export",
+						"149b3859-f9ed-4f73-8673-1a60c94cbd8e",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Download",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ3MDYzLCJleHAiOjE3NjI2NTA2NjMsIm5iZiI6MTc2MjY0NzA2MywianRpIjoiSzMwaEZ4bFZNbTIwNkVEZyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.h8_lsmvaXVqSQL-v1A8d2ZhtT0QJu-vx40SmSD6YqNI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "filters[status]",
+							"value": "active",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "filters[assigned_to]",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "format",
+							"value": "xlsx",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/export/4d8afa15-c850-475f-b296-7ec4cac0e93c/download",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"export",
+						"4d8afa15-c850-475f-b296-7ec4cac0e93c",
+						"download"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

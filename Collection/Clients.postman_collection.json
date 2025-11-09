@@ -1,0 +1,559 @@
+{
+	"info": {
+		"_postman_id": "343d1cd0-a1dd-46db-9e83-a745ffa77a75",
+		"name": "Clients",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43804602"
+	},
+	"item": [
+		{
+			"name": "All Clients",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjg0MzQ5LCJleHAiOjE3NjI2ODc5NDksIm5iZiI6MTc2MjY4NDM0OSwianRpIjoiMlJjVU5UeWtGSE1xNGFGTyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.X3F3mp9S0Gj0CbNtw_DX2bJGGY319EaLAamor0tuY1o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6ImtKcHNpUlNDUVlDWTlXSFgrUmM5Nnc9PSIsInZhbHVlIjoiZWNaeFI5amNiWklLYURRY3Q4bVZET3BubWpCa1RuZ0ovNmY2Z0JOUS9tMHBaRnAzZ0Z3U3FuQkE5RlZkVmpGbExWNks1a3ZrMHMyNVI4cHhMSVBvcWhzVWFJZTZyQUNCTStrYnhqZUJtdDFaODlZd2FtWmpyUFFhSE56b1ErUlQ0U0RTcmE1bzVzdXpNbVJ2Q2Y0dkcwZHdYeVVoUzE5ZkJlMFZNZ1BLcENnZXcwRkF0RTFLVFBVL3NyQmo4WUlhcy8rVFhFV0ZiNFMrZ1VrUUhXby9LUGF3MWwwaXYrNVlia1Q5ckZUbHdwbDJadStZbjg4ZE9BaG9sZTNLSm92TEw0ajZWWVpTQXVBRzk2LzdKTnQzN2tBS0xPV0xNWDZXSitDOTlWNGVCS2FBaWg2L3VLYkh2OGlSc2ZYNWd5ZzZJWEg2M3VqNTZNMjZObU9KYUp6Z2tEbGJCeVJWTjBFYTJxZC9NbkZCS3JiQWF0QWQ3SlBKMk4vcU5nNmlPb2VCbDdVNmllOWtWZGVLaG5iTlpDWXBGTytNd0E3MnZBOWhyRXh6U3hXY3p0V0NXYXJzVUQ3cTdXT2hnZ0JKekNpTyIsIm1hYyI6IjRhOTE3ZGYzNjRlMDVlMjIzYjZiNzFhMGVmNTNmODRmMjc2ZGQ1ODVlYTExZGViOTY5M2E5YzVhYzRhMGVjMDYiLCJ0YWciOiIifQ%3D%3D",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "new User",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sales_rep@example.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "1234567891",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password1234",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "password1234",
+							"type": "text"
+						},
+						{
+							"key": "user_type",
+							"value": "sales_rep",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clients",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Client By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ0MDQyLCJleHAiOjE3NjI2NDc2NDIsIm5iZiI6MTc2MjY0NDA0MiwianRpIjoicmdDYjZaVDRGYng3WXRsNyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yo4eUkm_G1Y0kuSh9_Gc_Lhthm0w1EO9NS3IH_m2tr0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6ImtKcHNpUlNDUVlDWTlXSFgrUmM5Nnc9PSIsInZhbHVlIjoiZWNaeFI5amNiWklLYURRY3Q4bVZET3BubWpCa1RuZ0ovNmY2Z0JOUS9tMHBaRnAzZ0Z3U3FuQkE5RlZkVmpGbExWNks1a3ZrMHMyNVI4cHhMSVBvcWhzVWFJZTZyQUNCTStrYnhqZUJtdDFaODlZd2FtWmpyUFFhSE56b1ErUlQ0U0RTcmE1bzVzdXpNbVJ2Q2Y0dkcwZHdYeVVoUzE5ZkJlMFZNZ1BLcENnZXcwRkF0RTFLVFBVL3NyQmo4WUlhcy8rVFhFV0ZiNFMrZ1VrUUhXby9LUGF3MWwwaXYrNVlia1Q5ckZUbHdwbDJadStZbjg4ZE9BaG9sZTNLSm92TEw0ajZWWVpTQXVBRzk2LzdKTnQzN2tBS0xPV0xNWDZXSitDOTlWNGVCS2FBaWg2L3VLYkh2OGlSc2ZYNWd5ZzZJWEg2M3VqNTZNMjZObU9KYUp6Z2tEbGJCeVJWTjBFYTJxZC9NbkZCS3JiQWF0QWQ3SlBKMk4vcU5nNmlPb2VCbDdVNmllOWtWZGVLaG5iTlpDWXBGTytNd0E3MnZBOWhyRXh6U3hXY3p0V0NXYXJzVUQ3cTdXT2hnZ0JKekNpTyIsIm1hYyI6IjRhOTE3ZGYzNjRlMDVlMjIzYjZiNzFhMGVmNTNmODRmMjc2ZGQ1ODVlYTExZGViOTY5M2E5YzVhYzRhMGVjMDYiLCJ0YWciOiIifQ%3D%3D",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Test User",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test7@example.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "1234567891",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password1234",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "password1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clients/29",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clients",
+						"29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a new client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ0MDQyLCJleHAiOjE3NjI2NDc2NDIsIm5iZiI6MTc2MjY0NDA0MiwianRpIjoicmdDYjZaVDRGYng3WXRsNyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yo4eUkm_G1Y0kuSh9_Gc_Lhthm0w1EO9NS3IH_m2tr0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6ImtKcHNpUlNDUVlDWTlXSFgrUmM5Nnc9PSIsInZhbHVlIjoiZWNaeFI5amNiWklLYURRY3Q4bVZET3BubWpCa1RuZ0ovNmY2Z0JOUS9tMHBaRnAzZ0Z3U3FuQkE5RlZkVmpGbExWNks1a3ZrMHMyNVI4cHhMSVBvcWhzVWFJZTZyQUNCTStrYnhqZUJtdDFaODlZd2FtWmpyUFFhSE56b1ErUlQ0U0RTcmE1bzVzdXpNbVJ2Q2Y0dkcwZHdYeVVoUzE5ZkJlMFZNZ1BLcENnZXcwRkF0RTFLVFBVL3NyQmo4WUlhcy8rVFhFV0ZiNFMrZ1VrUUhXby9LUGF3MWwwaXYrNVlia1Q5ckZUbHdwbDJadStZbjg4ZE9BaG9sZTNLSm92TEw0ajZWWVpTQXVBRzk2LzdKTnQzN2tBS0xPV0xNWDZXSitDOTlWNGVCS2FBaWg2L3VLYkh2OGlSc2ZYNWd5ZzZJWEg2M3VqNTZNMjZObU9KYUp6Z2tEbGJCeVJWTjBFYTJxZC9NbkZCS3JiQWF0QWQ3SlBKMk4vcU5nNmlPb2VCbDdVNmllOWtWZGVLaG5iTlpDWXBGTytNd0E3MnZBOWhyRXh6U3hXY3p0V0NXYXJzVUQ3cTdXT2hnZ0JKekNpTyIsIm1hYyI6IjRhOTE3ZGYzNjRlMDVlMjIzYjZiNzFhMGVmNTNmODRmMjc2ZGQ1ODVlYTExZGViOTY5M2E5YzVhYzRhMGVjMDYiLCJ0YWciOiIifQ%3D%3D",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Test User",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ad1d@example.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "12345678922",
+							"type": "text"
+						},
+						{
+							"key": "assigned_to",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "Hot",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clients",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ0MDQyLCJleHAiOjE3NjI2NDc2NDIsIm5iZiI6MTc2MjY0NDA0MiwianRpIjoicmdDYjZaVDRGYng3WXRsNyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yo4eUkm_G1Y0kuSh9_Gc_Lhthm0w1EO9NS3IH_m2tr0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6ImtKcHNpUlNDUVlDWTlXSFgrUmM5Nnc9PSIsInZhbHVlIjoiZWNaeFI5amNiWklLYURRY3Q4bVZET3BubWpCa1RuZ0ovNmY2Z0JOUS9tMHBaRnAzZ0Z3U3FuQkE5RlZkVmpGbExWNks1a3ZrMHMyNVI4cHhMSVBvcWhzVWFJZTZyQUNCTStrYnhqZUJtdDFaODlZd2FtWmpyUFFhSE56b1ErUlQ0U0RTcmE1bzVzdXpNbVJ2Q2Y0dkcwZHdYeVVoUzE5ZkJlMFZNZ1BLcENnZXcwRkF0RTFLVFBVL3NyQmo4WUlhcy8rVFhFV0ZiNFMrZ1VrUUhXby9LUGF3MWwwaXYrNVlia1Q5ckZUbHdwbDJadStZbjg4ZE9BaG9sZTNLSm92TEw0ajZWWVpTQXVBRzk2LzdKTnQzN2tBS0xPV0xNWDZXSitDOTlWNGVCS2FBaWg2L3VLYkh2OGlSc2ZYNWd5ZzZJWEg2M3VqNTZNMjZObU9KYUp6Z2tEbGJCeVJWTjBFYTJxZC9NbkZCS3JiQWF0QWQ3SlBKMk4vcU5nNmlPb2VCbDdVNmllOWtWZGVLaG5iTlpDWXBGTytNd0E3MnZBOWhyRXh6U3hXY3p0V0NXYXJzVUQ3cTdXT2hnZ0JKekNpTyIsIm1hYyI6IjRhOTE3ZGYzNjRlMDVlMjIzYjZiNzFhMGVmNTNmODRmMjc2ZGQ1ODVlYTExZGViOTY5M2E5YzVhYzRhMGVjMDYiLCJ0YWciOiIifQ%3D%3D",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Jaafar",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test7@example.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "1234567891",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "password1234",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "Inactive",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clients/32?name=Jaafar&status=Inactive",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clients",
+						"32"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Jaafar"
+						},
+						{
+							"key": "email",
+							"value": "test7@example.com",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "1234567891",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "password1234",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "Inactive"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ0MDQyLCJleHAiOjE3NjI2NDc2NDIsIm5iZiI6MTc2MjY0NDA0MiwianRpIjoicmdDYjZaVDRGYng3WXRsNyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yo4eUkm_G1Y0kuSh9_Gc_Lhthm0w1EO9NS3IH_m2tr0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6ImtKcHNpUlNDUVlDWTlXSFgrUmM5Nnc9PSIsInZhbHVlIjoiZWNaeFI5amNiWklLYURRY3Q4bVZET3BubWpCa1RuZ0ovNmY2Z0JOUS9tMHBaRnAzZ0Z3U3FuQkE5RlZkVmpGbExWNks1a3ZrMHMyNVI4cHhMSVBvcWhzVWFJZTZyQUNCTStrYnhqZUJtdDFaODlZd2FtWmpyUFFhSE56b1ErUlQ0U0RTcmE1bzVzdXpNbVJ2Q2Y0dkcwZHdYeVVoUzE5ZkJlMFZNZ1BLcENnZXcwRkF0RTFLVFBVL3NyQmo4WUlhcy8rVFhFV0ZiNFMrZ1VrUUhXby9LUGF3MWwwaXYrNVlia1Q5ckZUbHdwbDJadStZbjg4ZE9BaG9sZTNLSm92TEw0ajZWWVpTQXVBRzk2LzdKTnQzN2tBS0xPV0xNWDZXSitDOTlWNGVCS2FBaWg2L3VLYkh2OGlSc2ZYNWd5ZzZJWEg2M3VqNTZNMjZObU9KYUp6Z2tEbGJCeVJWTjBFYTJxZC9NbkZCS3JiQWF0QWQ3SlBKMk4vcU5nNmlPb2VCbDdVNmllOWtWZGVLaG5iTlpDWXBGTytNd0E3MnZBOWhyRXh6U3hXY3p0V0NXYXJzVUQ3cTdXT2hnZ0JKekNpTyIsIm1hYyI6IjRhOTE3ZGYzNjRlMDVlMjIzYjZiNzFhMGVmNTNmODRmMjc2ZGQ1ODVlYTExZGViOTY5M2E5YzVhYzRhMGVjMDYiLCJ0YWciOiIifQ%3D%3D",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clients/29",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clients",
+						"29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restore Client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ0MDQyLCJleHAiOjE3NjI2NDc2NDIsIm5iZiI6MTc2MjY0NDA0MiwianRpIjoicmdDYjZaVDRGYng3WXRsNyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yo4eUkm_G1Y0kuSh9_Gc_Lhthm0w1EO9NS3IH_m2tr0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "eyJpdiI6ImtKcHNpUlNDUVlDWTlXSFgrUmM5Nnc9PSIsInZhbHVlIjoiZWNaeFI5amNiWklLYURRY3Q4bVZET3BubWpCa1RuZ0ovNmY2Z0JOUS9tMHBaRnAzZ0Z3U3FuQkE5RlZkVmpGbExWNks1a3ZrMHMyNVI4cHhMSVBvcWhzVWFJZTZyQUNCTStrYnhqZUJtdDFaODlZd2FtWmpyUFFhSE56b1ErUlQ0U0RTcmE1bzVzdXpNbVJ2Q2Y0dkcwZHdYeVVoUzE5ZkJlMFZNZ1BLcENnZXcwRkF0RTFLVFBVL3NyQmo4WUlhcy8rVFhFV0ZiNFMrZ1VrUUhXby9LUGF3MWwwaXYrNVlia1Q5ckZUbHdwbDJadStZbjg4ZE9BaG9sZTNLSm92TEw0ajZWWVpTQXVBRzk2LzdKTnQzN2tBS0xPV0xNWDZXSitDOTlWNGVCS2FBaWg2L3VLYkh2OGlSc2ZYNWd5ZzZJWEg2M3VqNTZNMjZObU9KYUp6Z2tEbGJCeVJWTjBFYTJxZC9NbkZCS3JiQWF0QWQ3SlBKMk4vcU5nNmlPb2VCbDdVNmllOWtWZGVLaG5iTlpDWXBGTytNd0E3MnZBOWhyRXh6U3hXY3p0V0NXYXJzVUQ3cTdXT2hnZ0JKekNpTyIsIm1hYyI6IjRhOTE3ZGYzNjRlMDVlMjIzYjZiNzFhMGVmNTNmODRmMjc2ZGQ1ODVlYTExZGViOTY5M2E5YzVhYzRhMGVjMDYiLCJ0YWciOiIifQ%3D%3D",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clients/29/restore",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clients",
+						"29",
+						"restore"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Bulk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ0MDQyLCJleHAiOjE3NjI2NDc2NDIsIm5iZiI6MTc2MjY0NDA0MiwianRpIjoicmdDYjZaVDRGYng3WXRsNyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yo4eUkm_G1Y0kuSh9_Gc_Lhthm0w1EO9NS3IH_m2tr0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_ids[]",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "client_ids[]",
+							"value": "13",
+							"type": "text"
+						},
+						{
+							"key": "assigned_to",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clients/assign-bulk",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clients",
+						"assign-bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Restore Bulk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ0MDQyLCJleHAiOjE3NjI2NDc2NDIsIm5iZiI6MTc2MjY0NDA0MiwianRpIjoicmdDYjZaVDRGYng3WXRsNyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yo4eUkm_G1Y0kuSh9_Gc_Lhthm0w1EO9NS3IH_m2tr0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/clients/restore-bulk",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"clients",
+						"restore-bulk"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

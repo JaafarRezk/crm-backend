@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "0cc09b03-6ead-467b-a835-f95f65e7c73c",
+		"name": "Notifications",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43804602"
+	},
+	"item": [
+		{
+			"name": "List notifications",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Mark selected notifications as read",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "ids[]",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/notifications/mark-read",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notifications",
+						"mark-read"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark all notifications as read",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/notifications/mark-all-read",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"notifications",
+						"mark-all-read"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "9ddcfc9d-adba-4534-b964-324cda6a84bf",
+		"name": "Audit logs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43804602"
+	},
+	"item": [
+		{
+			"name": "List logs",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ4Mjc2LCJleHAiOjE3NjI2NTE4NzYsIm5iZiI6MTc2MjY0ODI3NiwianRpIjoiWGU0UjM1dXloc1ZzbURVOSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TdxtNE5yeFPkoYnQNcxdjlVkWG58r6ksMsoNglrEz4s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/audit-logs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"audit-logs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show log",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ4Mjc2LCJleHAiOjE3NjI2NTE4NzYsIm5iZiI6MTc2MjY0ODI3NiwianRpIjoiWGU0UjM1dXloc1ZzbURVOSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TdxtNE5yeFPkoYnQNcxdjlVkWG58r6ksMsoNglrEz4s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/audit-logs/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"audit-logs",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

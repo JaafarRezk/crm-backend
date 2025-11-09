@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "f7a503c1-19dd-434f-ac0d-578523f73a95",
+		"name": "Settings",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43804602"
+	},
+	"item": [
+		{
+			"name": "List all settings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ4Mjc2LCJleHAiOjE3NjI2NTE4NzYsIm5iZiI6MTc2MjY0ODI3NiwianRpIjoiWGU0UjM1dXloc1ZzbURVOSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TdxtNE5yeFPkoYnQNcxdjlVkWG58r6ksMsoNglrEz4s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/settings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update settings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ4Mjc2LCJleHAiOjE3NjI2NTE4NzYsIm5iZiI6MTc2MjY0ODI3NiwianRpIjoiWGU0UjM1dXloc1ZzbURVOSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TdxtNE5yeFPkoYnQNcxdjlVkWG58r6ksMsoNglrEz4s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/settings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show single setting",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzYyNjQ4Mjc2LCJleHAiOjE3NjI2NTE4NzYsIm5iZiI6MTc2MjY0ODI3NiwianRpIjoiWGU0UjM1dXloc1ZzbURVOSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.TdxtNE5yeFPkoYnQNcxdjlVkWG58r6ksMsoNglrEz4s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/settings/site_name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"settings",
+						"site_name"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
